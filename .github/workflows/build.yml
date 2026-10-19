@@ -21,3 +21,4 @@ jobs:
           target: Win64
           use-lto: false
           use-cpm-cache: false
+          combine: true
