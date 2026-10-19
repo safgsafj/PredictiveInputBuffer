@@ -44,7 +44,7 @@ namespace {
 }
 
 class $modify(PredictiveInputBufferKeyboard, CCKeyboardDispatcher) {
-    void dispatchKeyboardMSG(
+    bool dispatchKeyboardMSG(
         enumKeyCodes key,
         bool isKeyDown,
         bool isKeyRepeat,
@@ -54,7 +54,7 @@ class $modify(PredictiveInputBufferKeyboard, CCKeyboardDispatcher) {
             nextStage();
         }
 
-        CCKeyboardDispatcher::dispatchKeyboardMSG(
+        return CCKeyboardDispatcher::dispatchKeyboardMSG(
             key, isKeyDown, isKeyRepeat, timestamp
         );
     }
